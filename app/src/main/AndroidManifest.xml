@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a76599.du" >
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--读取log-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--拍照-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:name=".application.Baseapplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".ui.SplashAvtivity"
+            android:theme="@style/NoActivityFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+            <!--主页-->
+        <activity android:name=".MainActivity" />
+        <!-- 引导页-->
+        <activity android:name=".ui.GuideActivity"
+            android:theme="@style/NoActivityFullscreen"/>
+        <!--登录-->
+        <activity android:name=".ui.LoginActivity"
+            android:theme="@style/NoActivityFullscreen"/>
+        <!--注册-->
+        <activity android:name=".ui.RegisteredActivity"
+            android:theme="@style/NoActivityFullscreen"/>
+        <!--忘记密码-->
+        <activity android:name=".ui.ForgetPasswordActivity"
+            android:theme="@style/NoActivityFullscreen"/>
+        <!--新闻详情-->
+        <activity android:name=".ui.WebViewActivity" />
+        <!--文章编写-->
+        <activity android:name=".ui.SettingTextActivity" />
+        <!--文章详情-->
+        <activity android:name=".ui.ContentActivity" />
+    </application>
+
+</manifest>

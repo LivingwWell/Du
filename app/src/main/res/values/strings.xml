@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Du</string>
+    <string name="txt">开始写文章</string>
+    <string name="text_boy">男</string>
+    <string name="text_gril">女</string>
+    <string name="text_now_login">正在登陆...</string>
+</resources>
